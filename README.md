@@ -1,1 +1,1 @@
-WangZhiMin's repository
+Hello, World!
