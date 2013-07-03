@@ -1,0 +1,33 @@
+body{
+	margin: 0px;
+}
+/*----- header start -----*/
+#header{
+	width: 1000px;
+	height: 90px;
+	margin: 0 auto;
+	background-color: #eaeaea;
+}
+
+#logo{
+	margin: 0px;
+}
+/*----- header end -----*/
+
+/*----- navigation start -----*/
+#nav{
+	height: 45px;
+	background-color: red;
+}
+/*----- navigation end -----*/
+
+/*----- content start -----*/
+#content{
+  width: 1000px;
+  margin: 0 auto;
+}
+/*----- content end -----*/
+.clear
+{
+	clear: both;
+}

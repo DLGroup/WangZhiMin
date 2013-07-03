@@ -1,4 +1,11 @@
 # Django settings for cgxhotpot project.
+import sys, os
+PATH = sys.path[0]
+if os.path.isdir(PATH):
+  BASE_DIR = PATH
+elif os.path.isfile(PATH):
+  BASE_DIR = os.path.dirname(PATH)
+  BASE_DIR = BASE_DIR[:BASE_DIR.rfind("/")]
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -106,6 +113,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    BASE_DIR + "/templates"
 )
 
 INSTALLED_APPS = (
