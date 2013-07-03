@@ -1,0 +1,75 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<style type="text/css">
+#container
+{
+  width: 900px;
+  margin: 0 auto;
+  background-color: #eaeaea;
+}
+
+#gallery {
+  width: 200px;
+  float: left;
+}
+
+#photo {
+  width: 680px;
+  float: right;
+}
+.preview {
+  width: 200px;
+  margin-bottom: 5px;
+}
+.clear {
+  clear: both; 
+}
+
+.picture {
+  width: 680px; 
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+  $("#gallery a").click(function(event){
+    event.preventDefault();
+    var imgPath = $(this).attr("href");
+    $("#photo img").fadeOut(150, function(){
+      $(this).attr('src', imgPath).fadeIn(700);
+    }); //end fadeout
+    /**
+    var newImg = $('<img src = "'+imgPath+'" class = "picture" />');
+    newImg.hide();
+    $("#photo").prepend(newImg);
+    newImg.fadeIn(1000);
+    oldImg.fadeOut(1000, function(){
+      $(this).remove();
+    });
+**/
+  }); //end click
+}); //end ready
+</script>
+</head>
+<body>
+<div id = "container">
+<div id = "gallery">
+<a href = "images/k1.jpg">
+<img src = "images/1.jpeg" class = "preview"/></a>
+<a href = "images/k2.jpg">
+<img src = "images/2.jpeg" class = "preview"/>
+</a>
+<a href = "images/k3.jpg">
+<img src = "images/3.jpeg" class = "preview"/>
+</a>
+<a href = "images/k4.jpg">
+<img src = "images/4.jpeg" class = "preview"/>
+</a>
+</div>
+<div id = "photo">
+<img src = "images/k1.jpg" class = "picture"/>
+</div>
+<div class = "clear"></div>
+</div>
+</body>
+</html>
