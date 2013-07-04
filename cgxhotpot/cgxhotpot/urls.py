@@ -24,5 +24,6 @@ urlpatterns = patterns('',
 
     # path to css/js files:
     url(r'^src/(.*)$', 'django.views.static.serve', {'document_root': settings.BASE_DIR + '/src/'}),
-
+    # url to admin static files, for deploying to server:
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.STATIC_ROOT}),
 )
