@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<div id = "news_nav">
+</div>
+<div id = "news_content">
+{% if news_lists %}
+<p class = "news_header"><a href = "/">HOME</a> &gt; NEWS</p>
+<ul id = "news_list">
+	{% for news_list in news_lists %}
+	<li><a href = "./{{ news_list.id }}">{{ news_list.news_title }}</a> | {{ news_list.news_date }}</li>
+	{% endfor %}
+</ul>
+{% elif news_detail %}
+<p class = "news_header"><a href = "/">HOME</a> &gt; <a href = "/news">NEWS</a> &gt; {{ news_detail.news_title }}</p>
+<p class = "news_title">{{ news_detail.news_title }}</p>
+<p class = "news_date">{{ news_detail.news_date }}</p>
+<p class = "news_font">
+{% if news_detail.news_image %}
+<img src = "/{{ news_detail.news_image }}" />
+{% endif %}
+{{ news_detail.news_content }}
+</p>
+
+{% else %}
+<p>没有新闻<p>
+{% endif %}
+</div>
+{% endblock %}

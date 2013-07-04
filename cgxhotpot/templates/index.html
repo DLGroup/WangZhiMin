@@ -1,31 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "">
-<html>
-<head>
-<title>串根香官方网站</title>
-<meta charset="utf-8">
-<meta name="keywords" content="串串加盟,火锅加盟,串串香加盟,火锅连锁店">
-<meta name="description" content="中国串串香火锅加盟第一牌,火曝的门店生意欢迎各界前来品尝考察;超低入门加盟费用,让你轻松当老板.电话:4008-448-588">
-<link rel="stylesheet" type="text/css" href="src/style.css" />
-<link href="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
-<script type="text/javascript">
-$(function(){
-  $(".carousel").carousel('cycle', {
-    interval: 2000;
-  });
-});
-</script>
-</head>
-<body>
-<div id = "container">
-	<div id = "header">
-		<p id = "logo">串根香火锅</p>
-	</div>
-	<div id = "nav">
-	</div>
-	<div id = "content" class = "row">
+{% extends "base.html" %}
+{% block gallery %}  
+  <div id = "gallery" class = "row">  
     <div id = "myCarousel" class = "carousel slide">
     <!--Carousel items-->
+    <ol class = "carousel-indicators">
+      <li data-target = "#myCarousel" data-slide-to = "0" class="active"></li>
+      <li data-target = "#myCarousel" data-slide-to = "1" class="active"></li>
+      <li data-target = "#myCarousel" data-slide-to = "2" class="active"></li>
+    </ol>
     <div class = "carousel-inner">
       <div class = "active item">
         <img src = "src/images/1.jpg"/>
@@ -53,13 +35,23 @@ $(function(){
     <a class = "carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
     <a class = "carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
     </div>
-	</div>
-	<div id = "footer">
-	</div>
-  <!-- placed at the end of document so pages load faster -->
-  <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-  <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
-  <script src="//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap-transition.js"></script>
+  </div>
+{% endblock %}
+{% block content %}
+<div id = "introduction">
+  <span class = "subnav"><p class= "inline_p">&nbsp;&nbsp;串根香简介</p><p class = "inline_more">更多&nbsp;&nbsp;</p></span>
+  <p id = "index_intro">华阳串根香餐饮发展有限公司,是一家集餐饮开发、食品开发的 现代企业，下属有自营酒楼2家，特许连锁加盟店50余家，遍及全国 多个省、市，实现互惠、互利、共同发展。
+    华阳串根香餐饮发展有限公司，在短短10年间，凭借其出众的 口味，大众化的消费水平，贴心的服务，赢得了双流、华阳、成都 好吃嘴们的追捧。在经营上为公众提供营养、健康的食品，率先使 用一次性锅底，塑造健康串根香品牌。在全国行业品牌质量监督活 动中，被中国国际名牌培育发展委员会，中国市场品牌统计中心先 后授予“全国火锅行业十佳品牌”、“中华餐饮名店”、“中国驰 名品牌”等荣誉。</p>
 </div>
-</body>
-</html>
+<div id = "news_recent">
+  <span class = "subnav"><p class= "inline_p">&nbsp;&nbsp;串根香新闻</p><a href = "/news"><p class = "inline_more">更多&nbsp;&nbsp;</p></a></span>
+  <div style="margin-top:10px">
+{% for news_list in news_lists %}
+<p id= "index_news"><a href = "/news/{{ news_list.id }}">{{ news_list.news_title }}</a></p>
+{% endfor %}
+</div>
+</div>
+<div id = "enroll">
+  <span class = "subnav"><p class= "inline_p">&nbsp;&nbsp;加盟串根香</p><p class = "inline_more">更多&nbsp;&nbsp;</p></span>
+</div>
+{% endblock %}
