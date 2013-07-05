@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+{% block navbar %}<div class = "nav_bar"></div>{% endblock %}
+{% block content %}
+{% if jobs_detail %}
+<p class = "news_header"><a href = "/">首页</a> &gt;<a href = "/jobs">人才招聘</a> &gt; {{ jobs_detail }}</p>
+{% else %}
+<p class = "news_header"><a href = "/">首页</a> &gt;人才招聘</p>
+{% endif %}
+<div id = "news_nav">
+</div>
+<div id = "news_content">
+{% if jobs_lists %}
+<ul id = "news_list">
+	{% for jobs_list in jobs_lists %}
+	<li><a href = "./{{ jobs_list.id }}">{{ jobs_list.jobs_name }}</a></li>
+	{% endfor %}
+</ul>
+{% elif jobs_detail %}
+<table>
+	<tr>
+		<td width = "85px">招聘岗位</td>
+		<td>{{ jobs_detail.jobs_name }}</td>
+	</tr>
+	<tr>
+		<td>职位要求</td>
+		<td>{{ jobs_detail.jobs_description }}</td>
+	</tr>
+	<tr>
+		<td>待遇说明</td>
+		<td>{{ jobs_detail.jobs_salary }}</td>
+	</tr>
+	<tr>
+		<td>有效时限</td>
+		<td>{{ jobs_detail.jobs_deadline|date:"SHORT_DATE_FORMAT" }}</td>
+	</tr>
+	<tr>
+		<td>需要人数</td>
+		<td>{{ jobs_detail.jobs_number }}</td>
+	</tr>
+	<tr>
+		<td>职位要求</td>
+		<td>{{ jobs_detail.jobs_requirement }}</td>
+	</tr>
+	<tr>
+		<td>招聘负责人</td>
+		<td>{{ jobs_detail.jobs_contact }}</td>
+	</tr>
+</table>
+{% endif %}
+</div>
+{% endblock %}

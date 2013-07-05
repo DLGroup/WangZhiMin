@@ -27,11 +27,14 @@ $(function(){
         <a class = "nav_link" href = "/"><li><p class = "nav_text">首页</p></li></a>
         <a class = "nav_link" href = "#"><li><p class = "nav_text">关于串根香</p></li></a>
         <a class = "nav_link" href = "/news"><li><p class = "nav_text">新闻</p></li></a>
-        <a class = "nav_link" href = "#"><li><p class = "nav_text">人才招聘</p></li></a>
-        <a class = "nav_link" href = "#"><li><p class = "nav_text">联系我们</p></li></a>
+        <a class = "nav_link" href = "#"><li><p class = "nav_text">加盟串根香</p></li></a>
+        <a class = "nav_link" href = "/jobs"><li><p class = "nav_text">人才招聘</p></li></a>
+        <a class = "nav_link" href = "/contact"><li><p class = "nav_text">联系我们</p></li></a>
       </ul>
     </div>
 	</div>
+  <div class = "nav_shadow"></div>
+  {% block navbar %}{% endblock %}
   {% block gallery %}{% endblock %}
   <div id = "content" class = "row">
     {% block content %}{% endblock %}

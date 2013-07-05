@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, include, url
-# from django.views.generic import TemplateView
+from django.views.generic import TemplateView
 import settings
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -21,6 +21,12 @@ urlpatterns = patterns('',
 
     # news url
     url(r'^news/', include('news.urls')),
+
+    # jobs url
+    url(r'^jobs/', include('jobs.urls')),
+
+    # contact url
+    url(r'^contact/$', TemplateView.as_view(template_name = 'contact.html')),
 
     # path to css/js files:
     url(r'^src/(.*)$', 'django.views.static.serve', {'document_root': settings.BASE_DIR + '/src/'}),

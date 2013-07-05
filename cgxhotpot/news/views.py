@@ -11,5 +11,8 @@ def index(request):
 	return render_to_response('news.html', {'news_lists': news_lists})
 
 def news_detail(request, id):
-	news_detail = News.objects.get(pk = id)
+	try:
+		news_detail = News.objects.get(pk = id)
+	except News.DoesNotExist:
+		return render_to_response('news.html')
 	return render_to_response('news.html', {'news_detail': news_detail})
