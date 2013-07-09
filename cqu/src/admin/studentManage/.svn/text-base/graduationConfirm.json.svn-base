@@ -1,0 +1,9 @@
+
+{"total":6,"rows":[
+	{"id":"10001","name":"张三","rank":"男","sumCredit":"28","credit":"28","status":"0","major":"计算机科学与技术"},
+	{"id":"10002","name":"李四","rank":"男","sumCredit":"28","credit":"28","status":"2","major":"软件工程"},
+	{"id":"10003","name":"张三","rank":"男","sumCredit":"28","credit":"28","status":"0","major":"计算机科学与技术"},
+	{"id":"10004","name":"李四","rank":"男","sumCredit":"28","credit":"28","status":"1","major":"软件工程"},
+	{"id":"10005","name":"张三","rank":"男","sumCredit":"28","credit":"28","status":"2","major":"计算机科学与技术"},
+	{"id":"10006","name":"李四","rank":"男","sumCredit":"28","credit":"28","status":"1","major":"软件工程"}
+]}

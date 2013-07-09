@@ -79,7 +79,7 @@ html, body
   font-size: 20px;
 }
 
-#download
+#download p
 {
   border-bottom: 1px solid #F0F0F0; 
 }
@@ -90,7 +90,7 @@ html, body
   margin-left: 1%;
 }
 
-#notice
+#notice p
 {
   border-bottom: 1px solid #F0F0F0;
 }
@@ -101,7 +101,7 @@ html, body
   float: right;
 }
 
-#resource
+#resource p 
 {
   border-bottom: 1px solid #F0F0F0;
 

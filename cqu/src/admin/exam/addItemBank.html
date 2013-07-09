@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/style.css" />
+<script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+
+<title>添加学生信息</title>
+</head>
+	
+<body>
+	<div id="list">
+	<div class="location">
+		<div class="start"></div>
+		<div class="txt"><a href = "../base/main.html">首页</a></div>
+		<div class="dot"></div>
+		<div class="txt">考试管理</div>
+		<div class="dot"></div>
+		<div class="txt"><a href = "student.html">题库管理</a></div>
+		<div class="dot"></div>
+		<div class="currentl"></div>
+        <div class="current">添加题库</div>
+        <div class="currentr"></div>
+		
+		<div style="clear:both; height:-1px;"></div>
+	</div>
+
+
+	<div class="profile">
+		<table class="pro_table">
+			
+			<tr>
+				<td class="pro_title">
+					题库信息：
+				</td>
+				<td class="pro_lab">名称：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_wrong">
+					</div>
+					<div class="input_wrong_info">请输入名称!</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">课程：
+				</td>
+				<td class="pro_text">
+				  <select name="select" class="text_input">
+				    <option>离散数学</option>
+				    <option>C语言</option>
+				    <option>软件工程</option>
+			      </select>
+				</td>
+				<td class="pro_info">
+					<div class="input_ok">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">题目：
+				</td class="pro_text">
+				<td>
+				    <input type="file" name="fileField" id="fileField" />
+				</td>
+				<td class="pro_info">
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align:center">
+					<input type="button" class="pro_button" value="确定"/>
+					<input type="button" class="pro_button" value="取消"/>
+				</td>
+			</tr>
+		</table>
+	</div>
+
+	</div>
+</body>
+</html>

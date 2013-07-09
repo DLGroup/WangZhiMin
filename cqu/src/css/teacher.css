@@ -1,0 +1,39 @@
+
+
+
+.upload_left{padding:20px;}
+.upload_left table{width:100%;}
+.upload_left table th,
+.upload_left table td{padding:4px 0;}
+.upload_left table th{font:normal 14px/26px Helvetica, Tahoma, Arial, sans-serif; text-align:right;}
+.upload_left table textarea{width:500px; height:120px; padding:5px; border:solid 1px #ccc; color:#666;}
+.upload_left table select{width:120px; height:23px; border:solid 1px #ccc; color:#666; line-height:25px;}
+.upload_left table .input_1{width:330px; height:23px; border:solid 1px #ccc; color:#666; line-height:23px;}
+.upload_left table input{vertical-align:middle;}
+.upload_left table label{margin:0 4px; font-family:tahoma; vertical-align:middle;}
+.upload_left table .note_upload{display:inline-block;}
+.upload_left table .note_upload dt{float:left; width:120px; margin:0 10px 0 0;}
+.upload_left table .note_upload dd{float:left; width:300px;}
+.upload_left table .note_upload li{line-height:22px;}
+.noteupload
+{
+	display: inline-block;
+}
+
+a.btn {
+width: 120px;
+height: 42px;
+overflow: hidden;
+display: block;
+text-decoration: none;
+background: url(/images/choose_file.gif) left top no-repeat;
+}
+a.files {
+	background-image: url(../images/choose_file.gif);
+}
+.txt_userfile
+{
+	display:none;
+	background-image: url(../images/choose_file.gif);
+}
+

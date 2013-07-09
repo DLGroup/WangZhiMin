@@ -22,6 +22,9 @@ urlpatterns = patterns('',
     # User's url
     url(r'^user/', include('users.urls')),
 
+    # Admin's url
+    url(r'^admin/', include('administrator.urls')),
+
     # Image/JS/CSS files' location
     url(r'^src/(.*)$', 'django.views.static.serve', {'document_root': settings.BASE_DIR + '/src/'}),
 )

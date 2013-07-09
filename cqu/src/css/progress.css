@@ -1,0 +1,54 @@
+#processing_overlay
+{
+	position: absolute;
+	zIndex: 99998;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: auto;
+	background-color:#000;
+	opacity:0.5;
+	cursor:progress;
+}						
+#processing_container {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	min-width: 300px; /* Dialog will be no smaller than this */
+	max-width: 600px; /* Dialog will wrap after this width */
+	background: #FFF;
+	border: solid 5px #176AC2/*#669900*/;
+	color: #000;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#processing_title {
+	font-size: 14px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 1.75em;
+	background-color:#176AC2/*#669900*/;
+	color: #FFF;
+	/*border: solid 1px #FFF;*/
+	border-bottom: solid 1px #999;
+	cursor: default;
+	padding: 0em;
+	margin: 0em;
+}
+
+#processing_content {
+	text-align: center;
+	padding: 1em 1.75em;
+	margin: 0em;
+}
+
+#processing_message {
+	text-align:center;
+	/*vertical-align:middle;*/
+	padding-bottom:1.5em;
+}
+#processing_pic {
+	text-align:center;
+	vertical-align:middle;
+}

@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block main %}
+<div class ="row-fluid">
+	<div class = "well" style = "height: 400px">
+		<div class = "span2"></div>
+		<div class = "span3">
+			<h4 class = "text-info pull-right">管理平台登录</h4>
+			<p class = "muted pull-right">教室管理人员登录入口</p>
+		</div>
+		<div class = "span1"></div>
+		<div class = "span3">
+			<form id = "login_form"  class = "form-signin" action = "/admin/home/">
+				<input type = "text" class = "input-block-level" placeholder = "帐号">
+				<input type = "password" class = "input-block-level" placeholder = "密码">
+				<label class = "checkbox">
+				<input type = "checkbox" value = "remember-me">记住密码</label>
+				<button class = "btn btn-primary" type = "submit">登录</button>
+			</form>
+		</div>
+		<div class = "span3"></div>
+		<div class = "clear"></div>
+	</div>
+</div>
+{% endblock %}

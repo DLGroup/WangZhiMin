@@ -1,0 +1,229 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link type="text/css" rel="stylesheet" href="../../css/style.css" />
+<link type="text/css" rel="stylesheet" href="../../css/themes/icon.css"/>
+<link type="text/css" rel="stylesheet" href="../../css/smoothness/jquery-ui-1.8.21.custom.css"/>
+<link type="text/css" rel="stylesheet" href="../../css/themes/default/easyui.css"/>
+<script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../js/teacher/course.js"></script>
+<script type="text/javascript" src="../../js/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../js/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript">
+	function addCourse(){
+		
+		var html = '<tr><td class="pro_lab">专业：</td>'
+				    +'<td>'
+				    +'<select class="text_input">'
+					+'	<option>自动化</option>'
+					+'	<option>车辆工程</option>'
+					+'	<option>软件工程</option>'
+					+'</select>'
+				    +'</td>'
+				    +'<td >'
+					+'课程：<select class="text_input">'
+					+'	<option>计算机基础</option>'
+					+'	<option>Java程序设计基础</option>'
+					+'	<option>C++程序设计基础</option>'
+					+'</select>'
+			     	+'</td>'
+					+'<td><a href="#">删除</a></tr>';
+						
+		$("#add").after(html);
+	}
+</script>
+
+<title>添加教师信息</title>
+</head>
+	
+<body>
+	<div id="list">
+	<div class="location">
+		<div class="start"></div>
+		<div class="txt"><a href = "../base/main.html">首页</a></div>
+		<div class="dot"></div>
+		<div class="txt">用户管理</div>
+		<div class="dot"></div>
+		<div class="txt"><a href = "teacher.html">教师信息管理</a></div>
+		<div class="dot"></div>
+		<div class="currentl"></div>
+        <div class="current">添加教师信息</div>
+        <div class="currentr"></div>
+		
+		<div style="clear:both; height:-1px;"></div>
+	</div>
+
+
+	<div class="profile">
+		<table class="pro_table">
+			
+			<tr>
+				<td class="pro_title">
+					基本信息：
+				</td>
+				<td class="pro_lab">
+					姓名：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_wrong">
+					</div>
+					<div class="input_wrong_info">请输入姓名!</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">
+					工号：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_ok">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">
+					年龄：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_ok">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">
+					身份证号：
+				</td class="pro_text">
+				<td>
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="line"> </td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					教育经历：
+				</td>
+				<td class="pro_lab">
+					最高学历：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_wrong">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">
+					毕业学校：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_ok">
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_lab">
+					专业：
+				</td class="pro_text">
+				<td>
+					<select class="text_input">
+						<option>自动化</option>
+						<option>车辆工程</option>
+						<option>软件工程</option>
+					</select>
+				</td>
+				<td class="pro_info">
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="line"> </td>
+			</tr>
+			<tr >
+				<td class="pro_title" >
+					授课信息：
+				</td>
+				<td class="pro_title">
+					
+				</td>
+				<td class="pro_title">
+					
+				</td>
+				<td >
+					<a href="#" onClick="addCourse();">添加</a>
+				</td>
+			</tr>
+			<tr style="padding-right:200px;">
+			<td class="pro_lab">
+					专业：
+				</td>
+				<td>
+					<select class="text_input">
+						<option>自动化</option>
+						<option>车辆工程</option>
+						<option>软件工程</option>
+					</select>
+				</td>
+				<td >
+					课程：<select class="text_input">
+						<option>计算机基础</option>
+						<option>Java程序设计基础</option>
+						<option>C++程序设计基础</option>
+					</select>
+				</td>			
+			</tr>
+			<tr id="add">
+			</tr>
+			<tr>
+				<td colspan="4" style="text-align:center">
+					<input type="button" class="pro_button" onClick="addCourse();" value="确定"/>
+					<input type="button" class="pro_button" value="取消"/>
+				</td>
+			</tr>
+		</table>
+	</div>
+		
+	</div>
+	
+	   <div class="cont" id="div_addCourse">
+			<div id="c_01" >
+				<table id="addCourse" border="0" cellpadding="0" cellspacing="0" width="100%" class="listtb">
+				</table>
+			</div>
+	   </div>
+	
+</body>
+</html>
