@@ -1,0 +1,20 @@
+{% extends "user.html" %}
+{% block main_right %}
+<div class = "tabbable">
+		<ul class="nav nav-tabs">
+    		<li class="active"><a href="#tab1" data-toggle="tab">正在申请中的教室</a></li>
+    		<li><a href="#tab2" data-toggle="tab">申请历史</a></li>
+  		</ul>
+  		<div class="tab-content">
+    		<div class="tab-pane active" id="tab1">
+      			<p>申请进度</p>
+      			<div class="progress progress-striped active">
+  					<div class="bar" style="width: 33%;"></div>
+				</div>
+    		</div>
+    		<div class="tab-pane" id="tab2">
+      		<p>Howdy, I'm in Section 2.</p>
+    		</div>
+  		</div>
+	</div>
+{% endblock %}

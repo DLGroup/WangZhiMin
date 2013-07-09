@@ -1,0 +1,139 @@
+html, body
+{
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#container
+{
+  height: auto !important;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#banner{
+  margin: 5 auto;
+  width: 1000px;
+}
+
+.float
+{
+  float: right;
+}
+/*----- HEADER START -----*/
+#header
+{
+  width: 1000px;
+  margin: 0 auto;
+  height: 100px;
+  background-image: url(/src/images/header_background.png);
+  background-repeat: repeat-x;
+}
+
+
+#header img
+{
+  width: 90px;
+  height: 90px;
+  margin: 5px;
+  margin-left: 15px;
+}
+
+#header p
+{
+  display: inline;
+  color: rgb(96, 154, 248);
+  font-size: 30px;
+  position: relative;
+  top: 20px;
+}
+/*----- HEADER END -----*/
+
+
+/*----- NAV START -----*/
+#nav
+{
+  width: 1000px;
+  margin: 10px auto;
+  
+}
+/*----- NAV END -----*/
+
+/*----- MAIN START -----*/
+#main
+{
+  width: 1000px;
+  padding-bottom: 70px;
+  margin: 0 auto;
+} 
+#main_left
+{
+  width: 24%;
+  float: left;
+}
+
+#login_form p
+{
+  font-size: 20px;
+}
+
+#download
+{
+  border-bottom: 1px solid #F0F0F0; 
+}
+#main_mid
+{
+  width: 50%;
+  float: left;
+  margin-left: 1%;
+}
+
+#notice
+{
+  border-bottom: 1px solid #F0F0F0;
+}
+
+#main_right
+{
+  width: 24%;
+  float: right;
+}
+
+#resource
+{
+  border-bottom: 1px solid #F0F0F0;
+
+}
+.clear
+{
+  clear: both;
+}
+
+#user_info_banner
+{
+  display: block;
+  width: 100%;
+}
+
+/*----- MAIN END -----*/
+
+/*----- FOOTER START -----*/
+#footer
+{
+  height: 70px;
+  position: absolute;
+  bottom: 0px;
+  background-image: url(/src/images/footer_background.png);
+  background-repeat: repeat-x;
+  border-top: 1px solid rgb(214, 212, 212);
+  width: 100%;
+  text-align:center;
+}
+
+#footer p
+{
+  margin-bottom: 5px;
+}
+/*----- FOOTER END -----*/

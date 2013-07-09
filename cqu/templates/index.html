@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block main %}
+<div id = "main_left">
+<form id = "login_form"  class = "form-signin well" action = "/user">
+<p class = "form-signin-heading">在线教室申请系统入口</p>
+<input type = "text" class = "input-block-level" placeholder = "帐号">
+<input type = "password" class = "input-block-level" placeholder = "密码">
+<label class = "checkbox">
+<input type = "checkbox" value = "remember-me">记住密码</label>
+<button class = "btn btn-primary" type = "submit">登录</button>
+</form>
+<div id = "download">
+<p>下载专区</p>
+<ul>
+<li>重庆大学2013年暑假留校</li>
+<li>2013年毕业生安全离校</li>
+<li>第四届全国高等院校</li>
+<li>重庆大学第十届程序设计大赛</li>
+</ul>
+</div>
+</div>
+<div id = "main_mid">
+<div id = "notice">
+<p>通知公告</p>
+</div>
+</div>
+<div id = "main_right">
+<div id = "resource">
+<p>教室资源</p>
+</div>
+</div>
+<div class = "clear"></div>
+{% endblock %}

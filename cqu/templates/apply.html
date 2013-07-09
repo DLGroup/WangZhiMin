@@ -1,0 +1,48 @@
+{% extends "user.html" %}
+{% block main_right %}
+<div class = "well">
+	<p style = "color: rgb(89, 133, 202); font-size: 20px;">重庆大学教室使用申请表</p>
+	<table class = "table" width = "100%">
+		<tr>
+			<td><p style = "color: rgb(89, 133, 202)">校区</p></td>
+			<td colspan = "2"><label class = "checkbox">A区&nbsp;<input type = "checkbox" /></label></td>
+			<td colspan = "2" ><label class = "checkbox">B区&nbsp;<input type = "checkbox" /></label></td>
+			<td colspan = "2"><label class = "checkbox">C区&nbsp;<input type = "checkbox" /></label></td>
+		</tr>
+		<tr>
+			<td><p style = "color: rgb(89, 133, 202)">教室类型</p></td>
+			<td><label class = "checkbox">理论教室&nbsp;<input type = "checkbox" /></label></td>
+			<td><label class = "checkbox">制图教室&nbsp;<input type = "checkbox" /></label></td>
+			<td colspan = "2"><label class = "checkbox">多媒体教室&nbsp;<input type = "checkbox" /></label></td>
+			<td colspan = "2"><label class = "checkbox">语音教室&nbsp;<input type = "checkbox" /></label></td>
+		</tr>
+		<tr>
+			<td><input type = "text" class = "input-mini" placeholder = "人数" /></td>
+			<td><input type = "text" class = "input-small" placeholder = "起止周数" /></td>
+			<td><input type = "text" class = "input-mini" placeholder = "星期" /></td>
+			<td><input type = "text" class = "input-mini" placeholder = "节次" /></td>
+			<td><input type = "text" class = "input-small" placeholder = "任课老师" /></td>
+			<td><input type = "text" class = "input-small" placeholder = "课程名称" /></td>
+		</tr>
+		<tr>
+			<td><p style = "color: rgb(89, 133, 202)">用途</p></td>
+			<td colspan = "6"><input type = "text" placeholder = "用途" /></td>
+		</tr>
+		<tr>
+			<td><p style = "color: rgb(89, 133, 202)">学院意见</p></td>
+			<td colspan = "2"><input type = "text" class = "input-small" /></td>
+			<td><p style = "color: rgb(89, 133, 202)">经办人</p></td>
+			<td colspan = "2"><input type = "text" class = "input-small" /></td>
+		<tr>
+	</table>
+	<button id = "apply_btn" class = "btn btn-primary">提交</button>
+	<button class = "btn btn-danger">重置</button>
+</div>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+$("#apply_btn").click(function(){
+	$(location).attr('href', '/user/apply_success');
+});
+</script>
+{% endblock %}
