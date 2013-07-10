@@ -2,7 +2,8 @@
 {% block main %}
 <div id = "main_left">
 <form id = "login_form"  class = "form-signin well" action = "/user">
-<p class = "form-signin-heading">在线教室申请系统入口</p>
+<p class = "form-signin-heading" style = "margin-bottom: 5px;">申请员入口</p>
+<hr style = "margin: 0; margin-bottom: 10px;">
 <input type = "text" class = "input-block-level" placeholder = "帐号">
 <input type = "password" class = "input-block-level" placeholder = "密码">
 <label class = "checkbox">
@@ -19,13 +20,17 @@
 </div>
 <div id = "main_mid">
 <div id = "notice">
+<blockquote>
 <p>通知公告</p>
+</blockquote>
 </div>
 </div>
 <div id = "main_right">
 <div id = "resource">
+<blockquote>
 <p>教室资源</p>
-<ul>
+</blockquote>
+<ul class = "nav nav-list">
 <li>A310</li>
 <li>B512</li>
 <li>B220</li>
@@ -33,8 +38,10 @@
 </ul>
 </div>
 <div id = "download">
+<blockquote>
 <p>下载专区</p>
-<ul>
+</blockquote>
+<ul class = "nav nav-list">
 <li>重庆大学2013年暑假留校</li>
 <li>2013年毕业生安全离校</li>
 <li>第四届全国高等院校</li>

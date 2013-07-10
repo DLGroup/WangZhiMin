@@ -5,7 +5,7 @@
 <link type="text/css" rel="stylesheet" href="/src/admin/css/admin.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
-<title>教室信息查询</title>
+<title>发布通知</title>
 </head>
 	
 <body>
@@ -15,7 +15,7 @@
 		<div class="txt"><a href = "/src/admin/main.html">首页</a></div>
 		<div class="dot"></div>
 		<div class="currentl"></div>
-        <div class="current">教室信息查询</div>
+        <div class="current">发布通知</div>
         <div class="currentr"></div>
 		
 		<div style="clear:both; height:-1px;"></div>
@@ -24,45 +24,41 @@
 
 	<div class="profile">
 		<table class="pro_table">
+			
 			<tr>
-				<td colspan="4" class="pro_main_title">
-					教室信息查询
+				<td class="pro_title">
+					通知信息：
+				</td>
+				<td class="pro_lab">
+					标题：
+				</td>
+				<td class="pro_text">
+					<input type="text" class="text_input"/>
+				</td>
+				<td class="pro_info">
+					<div class="input_wrong">
+					</div>
+					<div class="input_wrong_info">请输入标题!</div>
 				</td>
 			</tr>
 			<tr>
-				<td colspan="4" class="line"> </td>
-			</tr>
-			<tr>
 				<td class="pro_title">
-					所在校区：
-					<select>
-						<option>A区</option>
-						<option>B区</option>
-						<option>C区</option>
-						<option>D区</option>
-					</select>
+					
 				</td>
-				<td class="pro_title">
-					教学楼：
-					<select>
-						<option>第一教学楼</option>
-						<option>第二教学楼</option>
-						<option>第三教学楼</option>
-						<option>第四教学楼</option>
-					</select>
+				<td class="pro_lab">
+					通知内容：
 				</td>
-				<td class="pro_title">
-					教室号码：
-					<input type = "text" class = "pro_text" placeholder = "请输入教室号" />
-				</td>		
-				<td class = "pro_title">
-					申请时间:
-					<input type = "text" class = "pro_text" value = "2013-7-21" />
-				</td>	
+				<td class="pro_text">
+					<textarea rows = "3" cols = "20" class="text_input" placeholder = "在此输入通知内容"></textarea>
+				</td>
+				<td class="pro_info">
+					<div class="input_ok">
+					</div>
+				</td>
 			</tr>
 			<tr>
 				<td colspan="4" style="text-align:center">
-					<a href = "/src/admin/classroom/result.html"><input type="button" class="pro_button" value="查询"/></a>
+					<input type="button" class="pro_button" value="确定"/>
 					<input type="button" class="pro_button" value="取消"/>
 				</td>
 			</tr>

@@ -14,20 +14,22 @@ html, body
 }
 
 #banner{
-  margin: 5 auto;
+  margin: 0 auto;
   width: 1000px;
+  height: 150px;
 }
 
 .float
 {
   float: right;
 }
+
 /*----- HEADER START -----*/
 #header
 {
   width: 1000px;
   margin: 0 auto;
-  height: 100px;
+  height: 70px;
   background-image: url(/src/images/header_background.png);
   background-repeat: repeat-x;
 }
@@ -35,8 +37,8 @@ html, body
 
 #header img
 {
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   margin: 5px;
   margin-left: 15px;
 }
@@ -45,9 +47,9 @@ html, body
 {
   display: inline;
   color: rgb(96, 154, 248);
-  font-size: 30px;
+  font-size: 25px;
   position: relative;
-  top: 20px;
+  top: 15px;
 }
 /*----- HEADER END -----*/
 
@@ -56,9 +58,15 @@ html, body
 #nav
 {
   width: 1000px;
-  margin: 10px auto;
+  margin: 5px auto;
   
 }
+
+#nav ul
+{
+  width: 100%;
+}
+
 /*----- NAV END -----*/
 
 /*----- MAIN START -----*/
@@ -66,7 +74,7 @@ html, body
 {
   width: 1000px;
   padding-bottom: 70px;
-  margin: 0 auto;
+  margin: 10px auto;
 } 
 #main_left
 {
@@ -90,6 +98,11 @@ html, body
   margin-left: 1%;
 }
 
+#notice
+{
+  padding-bottom: 20px;
+}
+
 #notice p
 {
   border-bottom: 1px solid #F0F0F0;
@@ -101,10 +114,20 @@ html, body
   float: right;
 }
 
+#resource
+{
+  padding-bottom: 20px;
+}
+
 #resource p 
 {
   border-bottom: 1px solid #F0F0F0;
 
+}
+
+#download
+{
+  padding-bottom: 20px;
 }
 .clear
 {

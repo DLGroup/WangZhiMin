@@ -9,3 +9,9 @@ def apply(request):
 
 def apply_success(request):
 	return render_to_response('apply_success.html')
+
+def check(request):
+	return render_to_response('user_check.html')
+
+def edit_profile(request):
+	return render_to_response('user_profile.html')
