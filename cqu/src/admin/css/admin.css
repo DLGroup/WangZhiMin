@@ -156,7 +156,10 @@ table.recordcont tr td { padding:5px; border:solid 1px #efefef; border-left:none
 /******************liyatao add*****************************/
 .table-border{border:solid 1px #ccc;}
 
-
+.block 
+{
+	display: block
+}
 .blue_text
 {
 	color: blue;

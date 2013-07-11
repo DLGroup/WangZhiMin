@@ -3,13 +3,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="/src/admin/css/admin.css" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-<link rel = "stylesheet" href = "//cdnjs.bootcss.com/ajax/libs/twitter-bootstrap/2.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="http://www.jeasyui.com/easyui/themes/default/easyui.css">
+<link type="text/css" rel="stylesheet" href="/src/css/themes/icon.css"/>	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
+	<script type="text/javascript" src="http://www.jeasyui.com/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="/src/js/easyui-lang-zh_CN.js"></script>
 <title>创建审批流程</title>
 </head>
 	
 <body>
-	<div id="list">
+<div id="list">
 	<div class="location">
 		<div class="start"></div>
 		<div class="txt"><a href = "/src/admin/main.html">首页</a></div>
@@ -20,46 +23,181 @@
 		
 		<div style="clear:both; height:-1px;"></div>
 	</div>
-
-
 	<div class="profile">
-		<table class = "table table-striped">
-			<thead>
-				<tr>
-					<th>待审批教室</th>
-					<th>申请人</th>
-					<th>所属学院</th>
-					<th>申请时间</th>
-					<th>操作</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>A310</td>
-					<td>沙哈匝德</td>
-					<td>国际学院</td>
-					<td>2013-7-9</td>
-					<td><a href = "/src/admin/approve/create_flow.html">创建审批流程</a></td>
-
-				</tr>
-				<tr>
-					<td>A310</td>
-					<td>沙哈匝德</td>
-					<td>国际学院</td>
-					<td>2013-7-9</td>
-					<td><a href = "/src/admin/approve/create_flow.html">创建审批流程</a></td>
-				</tr>
-				<tr>
-					<td>A310</td>
-					<td>沙哈匝德</td>
-					<td>国际学院</td>
-					<td>2013-7-9</td>
-					<td><a href = "/src/admin/approve/create_flow.html">创建审批流程</a></td>
-				</tr>
-			</tbody>
+		<table class="pro_table">
+			<tr>
+				<td colspan="4" class="pro_main_title">创建审批流程</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="line"> </td>
+			</tr>
 		</table>
-	</div>
+	<table id="tt" style = "align: center"></table>
+	
+	<script>
+		var worker_id = [
+		    {id:'ZLS',name:'朱老师'},
+		    {id:'LLS',name:'李老师'},
+		    {id:'DLS',name:'邓老师'},
+		    {id:'XLS',name:'谢老师'},
+		    {id:'MLS',name:'马老师'},
+		    {id:'TLS',name:'田老师'},
+		    {id:'SLS',name:'孙老师'},
+		    {id:'WLS',name:'汪老师'},
 
+		];
+
+		var rank_id = [
+			{id: 1, value: 1},
+			{id: 2, value: 2},
+			{id: 3, value: 3},
+			{id: 4, value: 4},
+			{id: 5, value: 5},
+			{id: 6, value: 6},
+			{id: 7, value: 7},
+			{id: 8, value: 8},
+		]
+
+		$(function(){
+			$('#tt').datagrid({
+				width:'auto',
+				height:'auto',
+				singleSelect:true,
+				url:'data/datagrid_data.json',
+				columns:[[
+					{field:'rank',title:'审批排序',width:200, align:"center", formatter:function(value){
+							for(var i=0; i<rank_id.length; i++){
+								if (rank_id[i].id == value) return rank_id[i].value;
+							}
+							return value;
+						},
+						editor:{
+							type:'combobox',
+							options:{
+								valueField:'id',
+								textField:'value',
+								data:rank_id,
+								required:true
+							}
+						}},
+					{field:'id',title:'审批人员',width:200,align:"center",
+						formatter:function(value){
+							for(var i=0; i<worker_id.length; i++){
+								if (worker_id[i].id == value) return worker_id[i].name;
+							}
+							return value;
+						},
+						editor:{
+							type:'combobox',
+							options:{
+								valueField:'id',
+								textField:'name',
+								data:worker_id,
+								required:true
+							}
+						}
+					},
+					{field:'authority',title:'审批权限',width:200, align:'center', editor:{
+							type:'checkbox',
+							options:{
+								on: '管理员权限',
+								off: '普通权限'
+							}
+						}},
+					/*
+					{field:'status',title:'Status',width:200,align:'center',
+						editor:{
+							type:'checkbox',
+							options:{
+								on: 'P',
+								off: ''
+							}
+						}
+					},
+					*/
+					{field:'action',title:'操作',width:200,align:'left',
+						formatter:function(value,row,index){
+							if (row.editing){
+								var s = '<a href="javascript:void(0)" onclick="saverow(this)">保存</a> ';
+								var c = '<a href="javascript:void(0)" onclick="cancelrow(this)">取消</a>';
+								return s+c;
+							} else {
+								var e = '<a href="javascript:void(0)" onclick="editrow(this)">编辑</a> ';
+								var d = '<a href="javascript:void(0)" onclick="deleterow(this)">删除</a>';
+								return e+d;
+							}
+						}
+					}
+				]],toolbar:[{
+					text:'添加审批人员',
+					iconCls:'icon-add',
+					handler:function(){
+						appendRow();
+					}
+				}],
+				onBeforeEdit:function(index,row){
+					row.editing = true;
+					updateActions(index);
+				},
+				onAfterEdit:function(index,row){
+					row.editing = false;
+					updateActions(index);
+				},
+				onCancelEdit:function(index,row){
+					row.editing = false;
+					updateActions(index);
+				}
+			});
+		});
+		function updateActions(index){
+			$('#tt').datagrid('updateRow',{
+				index: index,
+				row:{}
+			});
+		}
+		function getRowIndex(target){
+			var tr = $(target).closest('tr.datagrid-row');
+			return parseInt(tr.attr('datagrid-row-index'));
+		}
+		function editrow(target){
+			$('#tt').datagrid('beginEdit', getRowIndex(target));
+		}
+		function deleterow(target){
+			$.messager.confirm('删除审批人员','确定要删除?',function(r){
+				if (r){
+					$('#tt').datagrid('deleteRow', getRowIndex(target));
+				}
+			});
+		}
+		function saverow(target){
+			$('#tt').datagrid('endEdit', getRowIndex(target));
+		}
+		function cancelrow(target){
+			$('#tt').datagrid('cancelEdit', getRowIndex(target));
+		}
+
+		function appendRow(){
+			var row = $('#tt').datagrid('getSelected');
+			if (row){
+				var index = $('#tt').datagrid('getRowIndex', row);
+			} else {
+				index = 0;
+			}
+			$('#tt').datagrid('insertRow', {
+				index: index,
+				row:{
+				}
+			});
+			$('#tt').datagrid('selectRow',index);
+			$('#tt').datagrid('beginEdit',index);
+		}
+	</script>
+	<div style = "float: right; margin-top: 25px;">
+	<input type = "button" class = "pro_button" value = "提交流程" />
+	<input type = "button" class = "pro_button" value = "取消" />
+</div>
+<div style = "clear: both"></div>
 	</div>
+</div>
 </body>
 </html>

@@ -4,6 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link type="text/css" rel="stylesheet" href="/src/admin/css/admin.css" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src = "http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<link rel = "stylesheet" href = "http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css"></script>
+
 
 <title>创建审批流程</title>
 </head>
@@ -25,7 +28,85 @@
 
 
 	<div class="profile">
-
+		<table class="pro_table" >
+			<tr>
+				<td colspan="4" class="pro_main_title">
+					创建审批流程
+				</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="line"> </td>
+			</tr>
+			<tr>
+				<td class="pro_title">
+					操作：
+				</td>
+				<td>
+					<input id = "add_flow" type = "button" class = "pro_button" value = "添加审批人员" />
+					<input id = "end_flow" type = "button" class = "pro_button" value = "审批结束" />
+				</td>
+			</tr>
+			<tr id = "flowchart">
+				<td class = "pro_title">
+					流程：
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<input type = "button" class = "pro_button" value = "创建审批流程" />
+					<input type = "button" class = "pro_button" value = "取消" />
+				</td>
+			</tr>
+		</table>
+		<div id = "worker_dialog" title = "添加审批人员">
+			<ul style = "list-style-type: none">
+			<li><input type = "checkbox" value = "刘老师" onclick="selectOne(this)"/>刘老师</li>
+			<li><input type = "checkbox" value = "孙老师" onclick="selectOne(this)"/>孙老师</li>
+			<li><input type = "checkbox" value = "李老师" onclick="selectOne(this)"/>李老师</li>
+			<li><input type = "checkbox" value = "周老师" onclick="selectOne(this)"/>周老师</li>
+			<li><input type = "checkbox" value = "王老师" onclick="selectOne(this)"/>王老师</li>
+			<li><input type = "checkbox" value = "赵老师" onclick="selectOne(this)"/>赵老师</li>
+			<li><input type = "checkbox" value = "吴老师" onclick="selectOne(this)"/>吴老师</li>
+		</ul>
+		</div>
 	</div>
+	<script type="text/javascript">
+		function selectOne(obj)
+		{
+			var objCheckBox = $("#worker_dialog input");
+			for (var i = 0; i < objCheckBox.length; i++)
+			{
+				if (objCheckBox[i] != obj)
+					objCheckBox[i].checked = false;
+				else
+					objCheckBox[i].checked = true;
+			}
+		}
+		$(document).ready(function(){
+			$("#worker_dialog").dialog({
+				autoOpen: false,
+				modal: true,
+				buttons: {
+					"添加":function(){
+						$(this).dialog("close");
+						var objCheckBox = $("#worker_dialog input");
+						for (var i = 0; i < objCheckBox.length; i++)
+						{
+							if (objCheckBox[i].checked == true)
+								var checkedBox = objCheckBox[i]
+						}
+						$("#flowchart").append('<td>'+checkedBox.value+'</td>');
+				},
+				"取消": function(){
+					$(this).dialog("close");
+				}
+			}
+			});
+			$("#add_flow").click(function(){
+				$("#worker_dialog").dialog("open");
+			});
+		});
+	</script>
 </body>
 </html>
