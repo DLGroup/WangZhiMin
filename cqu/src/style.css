@@ -24,6 +24,10 @@ html, body
   float: right;
 }
 
+.overflow
+{
+  overflow: hidden;
+}
 /*----- HEADER START -----*/
 #header
 {
@@ -89,7 +93,8 @@ html, body
 
 #download p
 {
-  border-bottom: 1px solid #F0F0F0; 
+ 
+  border-bottom: 2px solid rgb(122, 159, 242);
 }
 #main_mid
 {
@@ -104,10 +109,9 @@ html, body
 }
 
 #notice p
-{
-  border-bottom: 1px solid #F0F0F0;
+{ 
+  border-bottom: 2px solid rgb(122, 159, 242);
 }
-
 #main_right
 {
   width: 24%;
@@ -119,16 +123,17 @@ html, body
   padding-bottom: 20px;
 }
 
-#resource p 
-{
-  border-bottom: 1px solid #F0F0F0;
-
+#class_resource
+{ 
+  border-bottom: 2px solid rgb(122, 159, 242);
 }
 
 #download
 {
   padding-bottom: 20px;
 }
+
+
 .clear
 {
   clear: both;
