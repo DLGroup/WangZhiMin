@@ -1,6 +1,6 @@
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title></title>
 <style type="text/css">
 <!--
@@ -19,7 +19,7 @@ body {
 function tupian(idt){
     var nametu="xiaotu"+idt;
     var tp = document.getElementById(nametu);
-    tp.src="/src/images/ico05.gif";//Í¼Æ¬ico04Îª°×É«µÄÕý·½ÐÎ
+    tp.src="/src/images/ico05.gif";
 	
 	for(var i=1;i<30;i++)
 	{
@@ -29,7 +29,7 @@ function tupian(idt){
 	  {
 	    var tp2=document.getElementById('xiaotu'+i);
 		if(tp2!=undefined)
-	    {tp2.src="/src/images/ico06.gif";}//Í¼Æ¬ico06ÎªÀ¶É«µÄÕý·½ÐÎ
+	    {tp2.src="/src/images/ico06.gif";}
 	  }
 	}
 }
@@ -44,7 +44,7 @@ function list(idstr){
 	//alert(imgobj);
 	
 	if(objectobj.style.display=="none"){
-		for(i=1;i<10;i++){
+		for(i=1;i<15;i++){
 			var name3="img"+i;
 			var name="subtree"+i;
 			var o=document.all(name);
@@ -63,7 +63,6 @@ function list(idstr){
 		imgobj.src="/src/images/ico04.gif";
 	}
 }
-
 </SCRIPT>
 
 <body>
@@ -71,6 +70,24 @@ function list(idstr){
   <tr>
     <TD>
 
+		<!-- <table width="100%" border="0" cellpadding="0" cellspacing="0">
+		  <tr>
+			<td width="207" height="55" background="/src/images/nav02.png">
+				<table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					<td width="25%" rowspan="2"><img src="/src/images/people.png" width="35" height="40" /></td>
+					<td width="75%" height="22" class="left-font01">ÄúºÃ£¬<span class="left-font02">king</span></td>
+				  </tr>
+				  <tr>
+					<td height="22" class="left-font01">
+						[&nbsp;<a href="/src/login.html" target="_top" class="left-font01">ÍË³ö</a>&nbsp;]</td>
+				  </tr>
+				</table>
+			</td>
+		  </tr>
+		</table>-->
+		
+		<!--  ×¨Òµ¿Î³Ì¿ªÊ¼    -->
 		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
@@ -78,13 +95,30 @@ function list(idstr){
 					<tr>
 						<td width="8%"><img name="img8" id="img8" src="/src/images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-							<a href="/src/admin/adminManage/admin.html" target="rightfrm" class="left-font03">用户管理</a></td>
+							<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('8');" >系统管理</a></td>
 					</tr>
 				</table>
 			</td>
           </tr>		  
         </TABLE>
-		
+		<table id="subtree8" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+          <td width="9%" height="8"><img id="xiaotu8" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="/src/admin/adminManage/admin.html" target="rightfrm" class="left-font03" onClick="tupian('8');">用户管理</a></td>
+        </tr>
+				<tr>
+				  <td width="9%" height="20" ><img id="xiaotu20" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="/src/admin/addMessage/index.html" target="rightfrm" class="left-font03" onClick="tupian('20');">发布通知</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="21" ><img id="xiaotu21" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="/src/admin/upload/index.html" target="rightfrm" class="left-font03" onClick="tupian('21');">上传文档</a></td>
+				</tr>
+		</table>
+		<!--  ×¨Òµ¿Î³Ì½áÊø    -->
+
+		<!--  ¿¼ÊÔ¹ÜÀí¿ªÊ¼    -->
 		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
@@ -92,46 +126,144 @@ function list(idstr){
 					<tr>
 						<td width="8%"><img name="img7" id="img7" src="/src/images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-								<a href="/src/admin/classroom/classroom.html" target="rightfrm" class="left-font03"  >查询教室</a></td>
+								<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('7');" >工作流管理</a></td>
 					</tr>
 				</table>
 			</td>
           </tr>		  
         </TABLE>
-		
+		<table id="subtree7" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+				  <td width="9%" height="17" ><img id="xiaotu17" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%">
+						<a href="/src/admin/approve/index.html" target="rightfrm" class="left-font03" onClick="tupian('17');">创建工作流</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="17" ><img id="xiaotu18" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%">
+						<a target="rightfrm" class="left-font03" onClick="tupian('18');">查看已有工作流</a></td>
+				</tr>
+      </table>
+	  <!--  ¿¼ÊÔ¹ÜÀí½áÊø    -->
+	  
+	  <!--  Ñ§Ô±¹ÜÀí¿ªÊ¼    -->
 	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
                   <td width="8%" height="12"><img name="img2" id="img2" src="/src/images/ico04.gif" width="8" height="11" /></td>
-                  <td width="92%"><a href="/src/admin/approve/index.html" target="rightfrm" class="left-font03"  >创建审批流程</a></td>
+                  <td width="92%"><a href="javascript:" target="rightfrm" class="left-font03" onClick="list('2');" >基础信息</a></td>
                 </tr>
             </table></td>
           </tr>
       </table>
 	  
+	  <table id="subtree2" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
+	  	<!--
+        <tr>
+          <td width="9%" height="16" ><img id="xiaotu16" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="../studentManage/student.html" target="rightfrm" class="left-font03" onClick="tupian('16');">Ñ§Ô±ÐÅÏ¢</a></td>
+        </tr>
+		<tr>
+          <td width="9%" height="15" ><img id="xiaotu15" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="../studentManage/studentExamine.html" target="rightfrm" class="left-font03" onClick="tupian('15');">Ñ§Ô±ÉóºË</a></td>
+        </tr>
+		<tr>
+          <td width="9%" height="14" ><img id="xiaotu14" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="../studentManage/paymentConfirm.html" target="rightfrm" class="left-font03" onClick="tupian('14');">½É·Ñ¹ÜÀí</a></td>
+        </tr>
+		<tr>
+          <td width="9%" height="13" ><img id="xiaotu13" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="../studentManage/graduationConfirm.html" target="rightfrm" class="left-font03" onClick="tupian('13');">½áÒµÈ·ÈÏ</a></td>
+        </tr>
+			<tr>
+          <td height="6"><img id="xiaotu6" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td><a href="../queryStatistics/studentFile.html" target="rightfrm" class="left-font03" onClick="tupian('6');">Ñ§Ô±µµ°¸</a></td>
+        </tr>
+    -->
+      </table>
 	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
                 <tr>
                   <td width="8%" height="12"><img name="img3" id="img3" src="/src/images/ico04.gif" width="8" height="11" /></td>
-                  <td width="92%"><a href="/src/admin/check/index.html" target="rightfrm" class="left-font03"  >查看审批状态</a></td>
+                  <td width="92%"><a href="javascript:" target="rightfrm" class="left-font03" onClick="list('3');" >教室管理</a></td>
                 </tr>
             </table></td>
           </tr>
       </table>
+	  
+	  <table id="subtree3" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
+        <tr>
+          <td width="9%" height="12" ><img id="xiaotu12" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a target="rightfrm" class="left-font03" onClick="tupian('12');">教室类型</a></td>
+        </tr>
+		<tr>
+          <td width="9%" height="11" ><img id="xiaotu11" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a target="rightfrm" class="left-font03" onClick="tupian('11');">教室位置</a></td>
+        </tr>
+        <tr>
+          <td width="9%" height="11" ><img id="xiaotu10" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a target="rightfrm" class="left-font03" onClick="tupian('10');">教室信息</a></td>
+        </tr>
+        <tr>
+          <td width="9%" height="11" ><img id="xiaotu9" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a target="rightfrm" class="left-font03" onClick="tupian('9');">教室地图</a></td>
+        </tr>
+      </table>
 	
+	  <!--  Ö¤Êé¹ÜÀí½áÊø    -->
+
+	  
+
+     <!-- »¥¶¯½»Á÷¿ªÊ¼ -->
       <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
         <tr>
           <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
               <tr>
                 <td width="8%"><img name="img6" id="img6" src="/src/images/ico04.gif" width="8" height="11" /></td>
-                <td width="92%"><a href="/src/admin/addMessage/index.html" target="rightfrm" class="left-font03" >发布通知</a></td>
+                <td width="92%"><a href="javascript:" target="rightfrm" class="left-font03" onClick="list('6');">教室调度</a></td>
               </tr>
           </table></td>
         </tr>
       </table>
-	  
+	  <table id="subtree6" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
+        <tr>
+          <td width="9%" height="10"><img id="xiaotu10" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td width="91%"><a href="/src/bbs/bbs/bbshome.htm" target="_blank" class="left-font03" onClick="tupian('10');">教室调度</a></td>
+        </tr>
+        <tr>
+          <td height="9"><img id="xiaotu9" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td><a href="/src/admin/questionnaire/questionnaire.html" target="rightfrm" class="left-font03" onClick="tupian('9');">排课管理</a></td>
+        </tr>
+      </table>
+	 <!-- »¥¶¯½»Á÷½áÊø-->
+	 
+	 <!-- ²éÑ¯Í³¼Æ¿ªÊ¼ 
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="8%"><img name="img5" id="img5" src="/src/images/ico04.gif" width="8" height="11" /></td>
+                  <td width="92%"><a href="javascript:" target="rightfrm" class="left-font03" onClick="list('5');">²éÑ¯Í³¼Æ</a></td>
+                </tr>
+            </table></td>
+          </tr>
+      </table>
+
+	  <table id="subtree5" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" cellspacing="0" class="left-table02">
+  
+        <tr>
+          <td height="7"><img id="xiaotu7" src="/src/images/ico06.gif" width="8" height="12" /></td>
+          <td><a href="../queryStatistics/learning.html" target="rightfrm" class="left-font03" onClick="tupian('7');">Ñ§Ï°Çé¿ö</a></td>
+        </tr>
+	
+      </table>
+	  -->
+	  <!-- ²éÑ¯Í³¼Æ½áÊø-->
+
+	 <!--ÏµÍ³¹ÜÀí¿ªÊ¼-->
 		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
@@ -139,38 +271,176 @@ function list(idstr){
 					<tr>
 						<td width="8%"><img name="img9" id="img9" src="/src/images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-								<a href="/src/admin/upload/index.html" target="rightfrm" class="left-font03"  >上传文档</a></td>
+								<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('9');" >资产管理</a></td>
 					</tr>
 				</table>
 			</td>
           </tr>		  
         </TABLE>
+
+		<table id="subtree9" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+				  <td width="9%" height="5" ><img id="xiaotu5" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('5');">资产库</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="4" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('4');">资产采购</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="3" ><img id="xiaotu3" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('3');">资产登记</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="2" ><img id="xiaotu2" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('2');">资产使用</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="6" ><img id="xiaotu6" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('6');">资产维修</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="7" ><img id="xiaotu7" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('7');">资产报废</a></td>
+				</tr>
+      </table>
+
+      <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img5" id="img5" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+								<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('5');" >信息查询</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+        <table id="subtree5" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+				  <td width="9%" height="5" ><img id="xiaotu5" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a href="/src/admin/classroom/classroom.html" target="rightfrm" class="left-font03" 
+						onClick="tupian('5');">空闲教室查询</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="4" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('4');">学生课表查询</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="3" ><img id="xiaotu3" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('3');">教室课表查询</a></td>
+				</tr>
+      </table>
+	<!--  ÏµÍ³¹ÜÀí½áÊø    -->
+
 	<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
 				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
 					<tr>
-						<td width="8%"><img name="img7" id="img7" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="8%"><img name="img4" id="img4" src="/src/images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-								<a href="/src/admin/execute/index.html" target="rightfrm" class="left-font03">审批申请</a></td>
+								<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('4');" >统计分析</a></td>
 					</tr>
 				</table>
 			</td>
           </tr>		  
         </TABLE>
-        <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+        <table id="subtree4" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+				  <td width="9%" height="5" ><img id="xiaotu5" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('5');">教室使用率</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="4" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('4');">教室维护率</a></td>
+				</tr>
+      </table>
+
+
+      <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
           <tr>
             <td height="29">
 				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
 					<tr>
-						<td width="8%"><img name="img7" id="img7" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="8%"><img name="img1" id="img1" src="/src/images/ico04.gif" width="8" height="11" /></td>
 						<td width="92%">
-								<a href="/src/admin/adminManage/editAdmin.html" target="rightfrm" class="left-font03">用户设置</a></td>
+								<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('1');" >管理驾驶舱</a></td>
 					</tr>
 				</table>
 			</td>
           </tr>		  
         </TABLE>
+        <table id="subtree1" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+				  <td width="9%" height="5" ><img id="xiaotu5" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('5');">教室状态监控</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="4" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('4');">教室非法入侵监控</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="6" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('6');">资产状态监控</a></td>
+				</tr>
+      </table>
+
+      <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img12" id="img12" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+								<a href="javascript:" target="rightfrm" class="left-font03" onClick="list('12');" >系统接口</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+        <table id="subtree12" style="DISPLAY: none" width="80%" border="0" align="center" cellpadding="0" 
+				cellspacing="0" class="left-table02">
+				<tr>
+				  <td width="9%" height="5" ><img id="xiaotu5" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('5');">信息门户接口</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="4" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('4');">移动平台接口</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="6" ><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('6');">教务系统接口</a></td>
+				</tr>
+				<tr>
+				  <td width="9%" height="3"><img id="xiaotu4" src="/src/images/ico06.gif" width="8" height="12" /></td>
+				  <td width="91%"><a target="rightfrm" class="left-font03" 
+						onClick="tupian('3');">研究生系统接口</a></td>
+				</tr>
+      </table>
 	  </TD>
   </tr>
   <div  style="position: absolute; left: 0px; bottom: 0px; z-index: 10;background: url('/src/images/right_botbg.png') repeat-x scroll 0 0 transparent;

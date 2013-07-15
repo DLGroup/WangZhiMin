@@ -1,0 +1,183 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(/src/images/left.gif);
+}
+-->
+</style>
+<link href="/src/admin/css/menucss.css" rel="stylesheet" type="text/css" />
+</head>
+<SCRIPT language=JavaScript>
+function tupian(idt){
+    var nametu="xiaotu"+idt;
+    var tp = document.getElementById(nametu);
+    tp.src="/src/images/ico05.gif";
+	
+	for(var i=1;i<30;i++)
+	{
+	  
+	  var nametu2="xiaotu"+i;
+	  if(i!=idt*1)
+	  {
+	    var tp2=document.getElementById('xiaotu'+i);
+		if(tp2!=undefined)
+	    {tp2.src="/src/images/ico06.gif";}
+	  }
+	}
+}
+
+function list(idstr){
+	var name1="subtree"+idstr;
+	var name2="img"+idstr;
+	var objectobj=document.all(name1);
+	var imgobj=document.all(name2);
+	
+	
+	//alert(imgobj);
+	
+	if(objectobj.style.display=="none"){
+		for(i=1;i<10;i++){
+			var name3="img"+i;
+			var name="subtree"+i;
+			var o=document.all(name);
+			if(o!=undefined){
+				o.style.display="none";
+				var image=document.all(name3);
+				//alert(image);
+				image.src="/src/images/ico04.gif";
+			}
+		}
+		objectobj.style.display="";
+		imgobj.src="/src/images/ico03.gif";
+	}
+	else{
+		objectobj.style.display="none";
+		imgobj.src="/src/images/ico04.gif";
+	}
+}
+
+</SCRIPT>
+
+<body>
+<table width="198" border="0" cellpadding="0" cellspacing="0" class="left-table01">
+  <tr>
+    <TD>
+
+		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img8" id="img8" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+							<a href="/src/admin/adminManage/admin.html" target="rightfrm" class="left-font03">系统管理</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+		
+		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img7" id="img7" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+								<a href="/src/admin/classroom/classroom.html" target="rightfrm" class="left-font03"  >查询教室</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+		
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="8%" height="12"><img name="img2" id="img2" src="/src/images/ico04.gif" width="8" height="11" /></td>
+                  <td width="92%"><a href="/src/admin/approve/index.html" target="rightfrm" class="left-font03"  >创建审批流程</a></td>
+                </tr>
+            </table></td>
+          </tr>
+      </table>
+	  
+	  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td width="8%" height="12"><img name="img3" id="img3" src="/src/images/ico04.gif" width="8" height="11" /></td>
+                  <td width="92%"><a href="/src/admin/check/index.html" target="rightfrm" class="left-font03"  >查看审批状态</a></td>
+                </tr>
+            </table></td>
+          </tr>
+      </table>
+	
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+        <tr>
+          <td height="29"><table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="8%"><img name="img6" id="img6" src="/src/images/ico04.gif" width="8" height="11" /></td>
+                <td width="92%"><a href="/src/admin/addMessage/index.html" target="rightfrm" class="left-font03" >发布通知</a></td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+	  
+		<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img9" id="img9" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+								<a href="/src/admin/upload/index.html" target="rightfrm" class="left-font03"  >上传文档</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+	<TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img7" id="img7" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+								<a href="/src/admin/execute/index.html" target="rightfrm" class="left-font03">审批申请</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+        <TABLE width="100%" border="0" cellpadding="0" cellspacing="0" class="left-table03">
+          <tr>
+            <td height="29">
+				<table width="85%" border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr>
+						<td width="8%"><img name="img7" id="img7" src="/src/images/ico04.gif" width="8" height="11" /></td>
+						<td width="92%">
+								<a href="/src/admin/adminManage/editAdmin.html" target="rightfrm" class="left-font03">用户设置</a></td>
+					</tr>
+				</table>
+			</td>
+          </tr>		  
+        </TABLE>
+	  </TD>
+  </tr>
+  <div  style="position: absolute; left: 0px; bottom: 0px; z-index: 10;background: url('/src/images/right_botbg.png') repeat-x scroll 0 0 transparent;
+    height: 30px;
+    width: 100%;">
+	
+	</div>
+</table>
+</body>
+</html>
