@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+$(function(){
+var socket = io.connect('http://localhost');
+socket.on('news', function (data) {
+console.log(data);
+socket.emit('my other event', { my: 'data', my2:'data2' });
+socket.emit('callback', 'tobi', function(data){
+console.log(data);
+});
+});
+});
+</script>
+</head>
+<body>
+Hello Socket.IO
+</body>
+</html>
