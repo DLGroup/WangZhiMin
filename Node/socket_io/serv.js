@@ -25,7 +25,7 @@ io.sockets.on('connection', function (socket) {
     
     /*name is first param, fn is second param*/
     socket.on('callback', function(name, fn){
-	console.log(name);
-	fn('woot')
+	    console.log(name);
+    	fn('woot')
     });
 });

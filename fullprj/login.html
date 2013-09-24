@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>fullchinese login page</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">	
+	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="css/bootstrap-select.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body> 
+	<div class="container">
+		<div id="header"></div>
+		<div class="row-fluid">
+			<div class="span3"></div>
+			<div class="span6">
+        <form>
+					<table>
+						<tr>
+							<td><p>User Name:</p></td>
+							<td><input type="text" placeholder="User Name" id="user_name"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><p>Password:</p></td>
+							<td><input type="text" placeholder="Password" id="password"></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="checkbox">&nbsp;&nbsp;Remember Me
+								<button class="btn btn-primary pull-right">Login</button>
+							</td>
+							<td></td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>
+								<button class="btn">Don't have account?Sigun up...</button>
+							</td>
+							<td style="padding-top: 10px">
+								<select class="selectpicker">
+									<option>Student</option>
+									<option>Coach</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+        </form>
+			</div>
+    </div>
+	</div>
+	<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/bootstrap-select.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">
+	$('.selectpicker').selectpicker();
+	</script>
+</body>
+</html>

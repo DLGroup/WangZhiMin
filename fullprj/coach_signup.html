@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>Coach signup page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+		<link rel="stylesheet" href="css/bootstrap-select.min.css" type="text/css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+<div class="container">
+	<div id="header"></div>
+	<div class="row-fluid">
+		<div class="span1"></div>
+		<div class="span6">
+    <form class="form-horizontal">
+        <div class="control-group">
+            <label class="control-label" for="user_name">User Name:</label>
+            <div class="controls">
+                <input type="text" id="user_name" placeholder="User Name">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password1">Password1:</label>
+            <div class="controls">
+                <input type="password" id="password1" placeholder="Password">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="password2">Password2:</label>
+            <div class="controls">
+                <input type="password" id="password2" placeholder="Password">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="email">E-mail:</label>
+            <div class="controls">
+                <input type="password" id="email" placeholder="E-mail">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="region">Region:</label>
+            <div class="controls">
+                <input type="password" id="region" placeholder="Region">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="phone">Phone:</label>
+            <div class="controls">
+                <input type="password" id="phone" placeholder="Phone">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="qq">QQ:</label>
+            <div class="controls">
+                <input type="password" id="qq" placeholder="QQ">
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="skype">Skype:</label>
+            <div class="controls">
+                <input type="password" id="skype" placeholder="Skype">
+            </div>
+        </div>
+    </form>
+	</div>
+	<div class="span3">
+		<label>English Level:</label>
+		<select class="selectpicker">
+			<option>Medium</option>
+			<option>Perfect</option>
+			<option>Local Speaker</option>
+		</select>
+		<label for="description">Coach Description:</label>
+		<textarea rows="5" placeholder="Enter Text"></textarea>
+		<br>
+		<button class="btn btn-primary pull-right">Sign up</button>
+	</div>
+</div>
+</div>
+<script src="js/jquery-1.10.2.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/bootstrap-select.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+$('.selectpicker').selectpicker();
+</script>
+</body>
+</html>

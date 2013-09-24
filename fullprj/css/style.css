@@ -1,0 +1,19 @@
+#header {
+	height: 30px;
+	background-color: #eaeaea;
+	margin-bottom: 20px;
+}
+
+#footer {
+	height: 30px;
+	margin-top: 10px;
+	background-color: #eaeaea;
+}
+
+td p {
+	font-weight: bold;
+}
+
+label {
+	font-weight: bold;
+}
