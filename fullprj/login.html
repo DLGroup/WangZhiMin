@@ -33,20 +33,21 @@
 							<td></td>
 						</tr>
 					</table>
-					<table>
-						<tr>
-							<td>
-								<button class="btn">Don't have account?Sigun up...</button>
-							</td>
-							<td style="padding-top: 10px">
-								<select class="selectpicker">
-									<option>Student</option>
-									<option>Coach</option>
-								</select>
-							</td>
-						</tr>
-					</table>
+					
         </form>
+				<table>
+					<tr>
+						<td>
+							<button id = "sign_up" class="btn">Don't have account?Sigun up...</button>
+						</td>
+						<td style="padding-top: 10px">
+							<select class="selectpicker">
+								<option value="student">Student</option>
+								<option value="coach">Coach</option>
+							</select>
+						</td>
+					</tr>
+				</table>
 			</div>
     </div>
 	</div>
@@ -55,6 +56,13 @@
 	<script src="js/bootstrap-select.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript" charset="utf-8">
 	$('.selectpicker').selectpicker();
+    $("#sign_up").click(function() {
+       var selected = $("select option:selected").val();
+       if (selected == "student") {
+				 $(location).attr('href', 'student_signup.html');
+       }
+			 else $(location).attr('href', 'coach_signup.html');
+    });
 	</script>
 </body>
 </html>
