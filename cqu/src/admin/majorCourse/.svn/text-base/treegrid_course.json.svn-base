@@ -1,9 +1,0 @@
-
-{"total":4,"rows":[
-	{"number":1,"major":"计算机","name":""},
-	{"number":11,"major":"","name":"Java程序设计","credit":"3","classHour":"20","_parentId":1},
-	{"number":12,"major":"","name":"C++语言基础","credit":"3","classHour":"20","_parentId":1},
-	{"number":2,"major":"软件工程","name":"","addr":"address2","state":"closed"},	
-	{"number":13,"major":"","name":"算法设计","credit":"3","classHour":"20","_parentId":2}
-
-]}

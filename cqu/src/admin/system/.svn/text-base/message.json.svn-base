@@ -1,9 +1,0 @@
-
-{"total":6,"rows":[
-	{"status":"1","name":"张三","time":"2013-03-04","category":"90"},
-	{"status":"0","name":"李四","time":"2013-03-04","category":"90"},
-	{"status":"0","name":"张三","time":"2013-03-04","category":"90"},
-	{"status":"1","name":"李四","time":"2013-03-04","category":"90"},
-	{"status":"1","name":"张三","time":"2013-03-04","category":"90"},
-	{"status":"1","name":"李四","time":"2013-03-04","category":"90"}
-]}

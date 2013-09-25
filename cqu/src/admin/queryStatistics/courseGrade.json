@@ -1,9 +1,0 @@
-
-{"total":6,"rows":[
-	{"name":"视频1","participatingNum":"100","sumNum":"200","rate":"50%","status":"2.35","score":"90"},
-	{"name":"视频2","participatingNum":"100","sumNum":"200","rate":"50%","status":"2.35","score":"90"},
-	{"name":"视频3","participatingNum":"100","sumNum":"200","rate":"50%","status":"2.35","score":"100"},
-	{"name":"视频4","participatingNum":"100","sumNum":"200","rate":"50%","status":"2.35","score":"100"},
-	{"name":"视频5","participatingNum":"100","sumNum":"200","rate":"50%","status":"2.35","score":"45"},
-	{"name":"视频6","participatingNum":"100","sumNum":"200","rate":"50%","status":"2.35","score":"200"}
-]}

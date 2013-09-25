@@ -1,7 +1,0 @@
-
-{"total":3,"rows":[
-	{"studentId":"10001","name":"张三","sex":"男","credit":"28","status":"0","major":"计算机科学与技术"},
-	{"studentId":"10002","name":"李四","sex":"男","credit":"28","status":"2","major":"软件工程"},
-	{"studentId":"10003","name":"王五","sex":"男","credit":"28","status":"0","major":"计算机科学与技术"}
-	
-]}
