@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}User Login{% endblock %}
+
+{% block content %}
+		<div class="row-fluid">
+			<div class="span3"></div>
+			<div class="span6">
+        <form action="." method="POST">{% csrf_token %}
+        	
+					<table>
+						<tr>
+							<td><p>User Name:</p></td>
+							<td>{{ form.username }}</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td><p>Password:</p></td>
+							<td>{{ form.password }}</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2">
+								<input type="checkbox">&nbsp;&nbsp;Remember Me
+								<button class="btn btn-primary pull-right">Login</button>
+							</td>
+							<td></td>
+						</tr>
+					</tr>
+				</table>
+        </form>
+				<table>
+					<tr>
+						<td>
+							<button id = "sign_up" class="btn">Don't have account?Sigun up...</button>
+						</td>
+						<td style="padding-top: 10px">
+							<select class="selectpicker">
+								<option value="student">Student</option>
+								<option value="coach">Coach</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+			</div>
+    </div>
+{% endblock %}
+{% block script %}
+	<script type="text/javascript" charset="utf-8">
+	$('.selectpicker').selectpicker();
+    $("#sign_up").click(function() {
+       var selected = $("select option:selected").val();
+       $.ajax({
+       	type: 'POST',
+       	url: '/user/reg/',
+       	data: {
+       		user_type: selected
+       	},
+       	success: function(result){
+       		$(location).attr('href', '/user/register/');
+       	},
+       	error: function(){}
+       });
+    });
+	</script>
+{% endblock %}

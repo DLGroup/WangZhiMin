@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}Student Signup{% endblock %}
+{% block content %}
+<form class="form-horizontal" action="." method="POST">{% csrf_token %}
+		<div class="row-fluid">
+			<div class="span3"></div>
+			<div class="span6">
+        <div class="control-group">
+            <label class="control-label" for="id_username">User Name:</label>
+            <div class="controls">
+                {{ form.username}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_password">Password1:</label>
+            <div class="controls">
+                {{ form.password}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_password_confirm">Password2:</label>
+            <div class="controls">
+                {{ form.password_confirm}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_email">E-mail:</label>
+            <div class="controls">
+                {{ form.email}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_region">Region:</label>
+            <div class="controls">
+                {{ form.region}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_phone">Phone:</label>
+            <div class="controls">
+                {{ form.phone }}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_qq">QQ:</label>
+            <div class="controls">
+                {{ form.qq }}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_skype">Skype:</label>
+            <div class="controls">
+                {{ form.skype }}
+            </div>
+        </div>
+				<button class="btn btn-primary pull-right">Sigun up</button>
+	</div>
+	<div class="span3"></div>
+		
+	</div>
+    </form>
+{% endblock %}

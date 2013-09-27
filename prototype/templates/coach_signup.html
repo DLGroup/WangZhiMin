@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Coach Sign up{% endblock %}
+{% block content %}
+<form class="form-horizontal" action="." method="POST">{% csrf_token %}
+	<div class="row-fluid">
+		<div class="span1"></div>
+		<div class="span6">
+        <div class="control-group">
+            <label class="control-label" for="id_username">User Name:</label>
+            <div class="controls">
+                {{ form.username}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_password">Password1:</label>
+            <div class="controls">
+                {{ form.password}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_password_confirm">Password2:</label>
+            <div class="controls">
+                {{ form.password_confirm}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_email">E-mail:</label>
+            <div class="controls">
+                {{ form.email}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_region">Region:</label>
+            <div class="controls">
+                {{ form.region}}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_phone">Phone:</label>
+            <div class="controls">
+                {{ form.phone }}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_qq">QQ:</label>
+            <div class="controls">
+                {{ form.qq }}
+            </div>
+        </div>
+        <div class="control-group">
+            <label class="control-label" for="id_skype">Skype:</label>
+            <div class="controls">
+                {{ form.skype }}
+            </div>
+        </div>
+    
+	</div>
+	<div class="span3">
+		<label>English Level:</label>
+		<select class="selectpicker">
+			<option>Medium</option>
+			<option>Perfect</option>
+			<option>Local Speaker</option>
+		</select>
+		<label for="description">Coach Description:</label>
+		<textarea rows="5" placeholder="Enter Text"></textarea>
+		<br>
+		<button class="btn btn-primary pull-right" id = "sign_up">Sign up</button>
+	</div>
+</div>
+</form>
+{% endblock %}
+{% block script %}
+<script type="text/javascript" charset="utf-8">
+$('.selectpicker').selectpicker();
+$(function(){
+    $("#id_password_confirm").keyup(checkPassWordMatch);
+
+    function checkPassWordMatch () {
+        var password = $("#id_password").val();
+        var password_confirm = $("#id_password_confirm").val();
+        if (password != password_confirm) {
+            console.log("password do not match");
+        }
+    }
+});
+</script>
+{% endblock %}
