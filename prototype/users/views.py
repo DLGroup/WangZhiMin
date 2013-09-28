@@ -40,6 +40,9 @@ def user_logout(request):
 
 def user_register(request):
 	user_type = request.session.get("user_type", "")
+	if user_type == "student":
+		render_template = "student_signup.html"
+	render_template = "coach_signup.html"
 	if request.method == 'POST':
 		form = RegisterForm(request.POST)
 		if form.is_valid():
@@ -57,12 +60,12 @@ def user_register(request):
 				login_user = authenticate(username = username, password = password)
 				login(request, login_user)
 				return HttpResponseRedirect('/user')
+		
+		return render(request, render_template, {'form': form})
 
 	form = RegisterForm()
-	if user_type == "student":
-		return render(request, 'student_signup.html', {'form': form})
-	elif user_type == "coach":
-		return render(request, 'coach_signup.html', {'form': form})
+	if render_template:
+		return render(request, render_template, {'form': form})
 	return HttpResponseRedirect('/user/login')
 
 @csrf_exempt

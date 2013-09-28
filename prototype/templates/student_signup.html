@@ -1,6 +1,13 @@
 {% extends "base.html" %}
 {% block title %}Student Signup{% endblock %}
 {% block content %}
+
+{% for error in form.username.errors %}
+<div class="alert alert-error" id = "error_message">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  {{ error }}
+</div>
+{% endfor %}
 <form class="form-horizontal" action="." method="POST">{% csrf_token %}
 		<div class="row-fluid">
 			<div class="span3"></div>
@@ -53,10 +60,30 @@
                 {{ form.skype }}
             </div>
         </div>
-				<button class="btn btn-primary pull-right">Sigun up</button>
+				<button class="btn btn-primary pull-right" id = "register_btn">Sigun up</button>
 	</div>
 	<div class="span3"></div>
 		
 	</div>
     </form>
+{% endblock %}
+{% block script %}
+<script type="text/javascript">
+window.setTimeout(function() {
+        $("#error_message").fadeTo(500, 0).slideUp(500, function() {
+            $(this).remove();
+        });
+
+    }, 3000);
+
+$("#id_password_confirm").blur(function() {
+    var password = $("#id_password").val();
+    var password_confirm = $("#id_password_confirm").val();
+    if (password != password_confirm) {
+        alert("Password do not match!");
+        $("#register_btn").attr('disabled', 'disabled');
+    }
+    else $("#register_btn").removeAttr('disabled');
+});
+</script>
 {% endblock %}

@@ -1,6 +1,14 @@
 {% extends "base.html" %}
 {% block title %}Coach Sign up{% endblock %}
 {% block content %}
+
+{% for error in form.username.errors %}
+<div class="alert alert-error" id = "error_message">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  {{ error }}
+</div>
+{% endfor %}
+
 <form class="form-horizontal" action="." method="POST">{% csrf_token %}
 	<div class="row-fluid">
 		<div class="span1"></div>
@@ -73,16 +81,14 @@
 {% block script %}
 <script type="text/javascript" charset="utf-8">
 $('.selectpicker').selectpicker();
-$(function(){
-    $("#id_password_confirm").keyup(checkPassWordMatch);
-
-    function checkPassWordMatch () {
-        var password = $("#id_password").val();
-        var password_confirm = $("#id_password_confirm").val();
-        if (password != password_confirm) {
-            console.log("password do not match");
-        }
+$("#id_password_confirm").blur(function() {
+    var password = $("#id_password").val();
+    var password_confirm = $("#id_password_confirm").val();
+    if (password != password_confirm) {
+        alert("Password do not match!");
+        $("#sign_up").attr('disabled', 'disabled');
     }
+    else $("#sign_up").removeAttr('disabled');
 });
 </script>
 {% endblock %}
