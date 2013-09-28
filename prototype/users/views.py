@@ -44,9 +44,8 @@ def user_register(request):
 		render_template = "student_signup.html"
 	elif user_type == "coach":
 		render_template = "coach_signup.html"
-	else: 
-		render_template = None
-
+	else:
+		return HttpResponseRedirect('/user/login')
 	if request.method == 'POST':
 		form = RegisterForm(request.POST)
 		if form.is_valid():
@@ -69,9 +68,7 @@ def user_register(request):
 		return render(request, render_template, {'form': form})
 
 	form = RegisterForm()
-	if render_template is not None:
-		return render(request, render_template, {'form': form})
-	return HttpResponseRedirect('/user/login')
+	return render(request, render_template, {'form': form})
 
 @csrf_exempt
 @require_http_methods(["POST"])
