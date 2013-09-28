@@ -80,7 +80,21 @@
 {% endblock %}
 {% block script %}
 <script type="text/javascript" charset="utf-8">
+$(function() {
+    var password = $("#id_password").val();
+    var password_confirm = $("#id_password_confirm").val();
+    var username = $("#id_username").val();
+    if (username == "" || password == "" || password_confirm == "") {
+        $("#sign_up").attr('disabled', 'disabled');
+    }
+});
 $('.selectpicker').selectpicker();
+window.setTimeout(function() {
+        $("#error_message").fadeTo(500, 0).slideUp(500, function() {
+            $(this).remove();
+        });
+
+    }, 3000);
 $("#id_password_confirm").blur(function() {
     var password = $("#id_password").val();
     var password_confirm = $("#id_password_confirm").val();

@@ -42,7 +42,9 @@ def user_register(request):
 	user_type = request.session.get("user_type", "")
 	if user_type == "student":
 		render_template = "student_signup.html"
-	render_template = "coach_signup.html"
+	else:
+		render_template = "coach_signup.html"
+
 	if request.method == 'POST':
 		form = RegisterForm(request.POST)
 		if form.is_valid():
@@ -59,6 +61,7 @@ def user_register(request):
 				user_profile.save()
 				login_user = authenticate(username = username, password = password)
 				login(request, login_user)
+				user_type = ""
 				return HttpResponseRedirect('/user')
 		
 		return render(request, render_template, {'form': form})

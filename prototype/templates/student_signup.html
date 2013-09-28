@@ -85,5 +85,14 @@ $("#id_password_confirm").blur(function() {
     }
     else $("#register_btn").removeAttr('disabled');
 });
+
+$(function() {
+    var password = $("#id_password").val();
+    var password_confirm = $("#id_password_confirm").val();
+    var username = $("#id_username").val();
+    if (username == "" || password == "" || password_confirm == "") {
+        $("#register_btn").attr('disabled', 'disabled');
+    }
+});
 </script>
 {% endblock %}
