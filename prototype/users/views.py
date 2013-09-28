@@ -7,6 +7,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login, logout
 from forms import LoginForm, RegisterForm
 from models import UserProfile
+from django.views.decorators.http import require_http_methods
 
 
 @login_required(login_url="/user/login")
@@ -24,6 +25,7 @@ def user_login(request):
 				if user.is_active:
 					login(request, user)
 					return HttpResponseRedirect('/user')
+			
 			else:
 				state = "Invalid user or password"
 			return render(request, 'login.html', {'form': form, 'state': state})
@@ -59,9 +61,12 @@ def user_register(request):
 	form = RegisterForm()
 	if user_type == "student":
 		return render(request, 'student_signup.html', {'form': form})
-	return render(request, 'coach_signup.html', {'form': form})
+	elif user_type == "coach":
+		return render(request, 'coach_signup.html', {'form': form})
+	return HttpResponseRedirect('/user/login')
 
 @csrf_exempt
+@require_http_methods(["POST"])
 def reg(request):
 	request.session["user_type"] = request.POST["user_type"]
 	return HttpResponse("successful!")
