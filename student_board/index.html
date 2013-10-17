@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Board</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<div id="container" class="container">
+		<div class="header">
+			<h3 class="text-muted">Full Chinese</h3>
+		</div>
+		<div class="content">
+			<div class="row">
+				<div class="alert alert-info col-md-9">
+					<!--
+					<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				-->
+	  				In Session With J.Halpert. Last Time: 30 minutes 45 seconds.
+				</div>
+				<div class="notification pull-right">
+					<button type="button" class="btn btn-primary btn-lg notification-btn" data-toggle="popover">
+						<span class="glyphicon glyphicon-bullhorn"></span>
+					</button>
+				</div>
+				<!--
+				<div class="scheduler">
+					<button type="button" class="btn btn-primary">Scheduler</button>
+				</div>
+			-->
+			</div>
+			<div class="row">
+				<div class="col-md-3 contact">
+					<div class="contact-title">
+						<p>Contact</p>
+					</div>
+					<div class="contact-list">
+						<table class="table-hover">
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl data-toggle="popover" class="contact-popover">
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<dl>
+										<dt>Jason</dt>
+										<dd>Jason@apple.com</dd>
+									</dl>
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="col-md-9 chatbox">
+					<div class="contact-title">
+						<p class="pull-right">Jason</p>
+					</div>
+					<div class="chat-message">
+						<table class="chat-message-table">
+							<tr>
+								<td>
+									<img src="img/github.jpg" class="img-circle portrait"/>
+								</td>
+								<td>
+									<p>Hello, I'm from Honduras! I want to learn Chinese, can you help me?</p>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="chat-input">
+						<div class="col-md-10 chat-input-box">
+							<textarea class="form-control"></textarea>
+						</div>
+						<div class="col-md-2">
+							<button type="button" class="btn btn-primary chat-send-btn">Send</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer">
+			<p class="text-muted pull-right">Diluntech &copy; 2013</p>
+		</div>
+	</div>
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(".notification-btn").popover({
+			trigger: 'click',
+			placement: 'bottom',
+			title: 'Message List',
+			html: true,
+      		content: function(){
+        		return '<table class="notification-table"><tr><td><dl><dt>System</dt><dd>said</dd></dl></td><td>Received invitation from Jack</td></tr><tr><td><dl><dt>System</dt><dd>said</dd></dl></td><td>Received invitation from Jack</td></tr><tr><td><dl><dt>System</dt><dd>said</dd></dl></td><td>Received invitation from Jack</td></tr><tr><td><dl><dt>System</dt><dd>said</dd></dl></td><td>Received invitation from Jack</td></tr><tr><td><dl><dt>System</dt><dd>said</dd></dl></td><td>Received invitation from Jack</td></tr></table>'
+      		}
+		});
+
+		$(".contact-popover").popover({
+			trigger: 'click',
+			placement: 'bottom',
+			title: 'Jason',
+			html: true,
+			content: function() {
+				return '<p class="muted"><strong>name:</strong> Jason</p><p class="muted"><strong>Description:</strong></p><p>Toggleable, contextual menu for displaying lists of links. Made interactive with the dropdown JavaScript plugin.</p>'
+			}
+		});
+
+		$(".chat-send-btn").click(function() {
+			var text = $(".chat-input textarea").val();
+			if (text=="") {
+				return
+			}
+			var html = "<tr><td><img src='img/github.jpg' class='img-circle portrait'/></td><td class='chat-message-content'><p>"+text+"</p></td></tr>";
+			$(".chat-message-table").append(html);
+			$(".chat-input textarea").val('');		
+		});
+	 </script>
+</body>
+</html>

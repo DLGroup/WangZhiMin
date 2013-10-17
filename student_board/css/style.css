@@ -1,0 +1,158 @@
+/* narrow width */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+html,body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#container {
+	height: auto !important;
+    min-height: 100%;
+    height: 100%;
+    position: relative; /* Required to absolutely position the footer */
+}
+
+.header {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 15px;
+}
+
+.content {
+    margin-bottom: 40px;
+    height: 690px;
+    padding: 20px;
+    color: inherit;
+    /* background-color: #eeeeee;
+    border-radius: 5px */
+}
+
+/* Notification Starts */
+.notification-btn {
+    margin-top: 5px;
+}
+
+.notification-table td{
+    padding: 5px;
+}
+
+.notification-table dl{
+    text-align: right;
+}
+.notification-table dt{
+    color: rgb(126, 189, 245);
+}
+
+.popover {
+    width: 300px;
+}
+
+/* Notification Ends */
+
+/* Contact Panel Starts */
+.contact {
+
+    height: 570px;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border: 1px solid rgb(220, 220, 220);
+    padding: 0;
+}
+
+.contact-title {
+    height: 40px;
+    padding-top: 8px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(245, 245, 245);
+}
+
+.contact .contact-title {
+    padding-left: 10px;
+    border-top-left-radius: 8px;
+}
+
+
+.contact-list {
+    height: 500px;
+    overflow-y: scroll;
+    /* border-bottom: 1px solid rgb(220, 220, 220); */
+}
+
+.contact-list table {
+    width: 100%;
+}
+
+.contact-list table td {
+    height: 35px;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.contact-popover {
+    cursor: pointer;
+}
+
+.portrait {
+    margin-left: 10px;
+    width: 60px;
+    height: 60px;
+}
+/* Contact Panel Ends */
+
+/* Chat Panel Starts */
+.chatbox {
+    border: 1px solid rgb(220, 220, 220);
+    border-left: none;
+    height: 570px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 0;
+}
+
+.chatbox .contact-title {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 0;
+    padding-right: 10px;
+}
+
+.chat-message {
+    height: 450px;
+    padding: 10px;
+    background-color: #eaeaea;
+    overflow-y: scroll;
+    border-bottom: 1px solid rgb(220, 220, 220);
+}
+
+.chat-message-table td{
+    padding: 10px;
+}
+
+
+.chat-input {
+    padding: 10px
+}
+
+.chat-input-box {
+    padding: 0;
+}
+
+.chat-send-btn {
+    margin-left: 15px;
+    margin-top: 10px;
+}
+/* Chat Panel Ends */
+
+.footer {
+    height: 30px; /* Define height of the footer */
+    position: absolute;
+    bottom: 0; /* Sit it on the bottom */
+    border-top: 1px solid #e5e5e5;
+    padding-top: 5px;
+    width: 930px;
+}
