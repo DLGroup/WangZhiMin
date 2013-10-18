@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <title>AngularJS TODO app</title>
+    <script src="js/angular.min.js"></script>
+    <script src="js/underscore-min.js"></script>
+    <script src="todo.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="todo.css"/>
+</head>
+<body>
+    <div ng-controller="TodoCtrl">
+        <h2>Total todos: {{remaining()}} of {{getTotalTodos()}} remaining</h2>
+        <ul class="list-unstyled">
+            <li ng-repeat="todo in todos">
+                 <input type="checkbox" ng-model="todo.done"/>
+                <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+        <form class="form-horizontal">
+            <input type="text" ng-model="formTodoText"/>
+            <button class="btn btn-default" ng-click="addTodo()">
+                <i class="glyphicon glyphicon-check"></i>Add
+            </button>
+        </form>
+
+        <button class="btn btn-danger" ng-click="clearComplete()">
+            <i class="glyphicon glyphicon-trash">Clear Completed</i>
+        </button>
+    </div>
+</body>
+</html>
