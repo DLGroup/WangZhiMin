@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+eugene:
+  email: 'eugene@example.com'
+  hashed_password: 'e5e9fa1ba31ecd1ae84f75caaa474f3a663f05f4' # => secret
+
+
+lauren:
+  email: 'lauren@example.com'
+  hashed_password: '6bc7464272bb8dfd48c4fac47b7afcab7e42f315384e47a4d995ae03d4590af2' # => hello123
+
+
