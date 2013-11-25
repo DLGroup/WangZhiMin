@@ -13,7 +13,7 @@ class RegisterForm(forms.Form):
 	region = forms.CharField(required = False, max_length = 64)
 	phone = forms.CharField(required = False, max_length = 64)
 	qq = forms.CharField(required = False, max_length = 64)
-	skype = forms.CharField(required = False, max_length = 64)
+    skype = forms.CharField(required = False, max_length = 64)
 
 	def clean_username(self):
 		if 'username' in self.cleaned_data:
